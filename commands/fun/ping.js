@@ -11,6 +11,9 @@ module.exports = {
     // Execute Command - Parameters: message
     execute(message) {
         // Send Message
-        message.channel.send('I love pizza 🍕');
+        message.channel.send('I love pizza 🍕').then(sentMessage => {
+            // Add Reaction
+            sentMessage.react('👍');
+        });
     },
 };
